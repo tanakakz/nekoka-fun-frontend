@@ -68,5 +68,19 @@
 </template>
 
 <script>
-export default {}
+import categoriesQuery from '~/apollo/queries/category/categories'
+
+export default {
+  data() {
+    return {
+      categories: []
+    }
+  },
+  apollo: {
+    categories: {
+      prefetch: true,
+      query: categoriesQuery
+    }
+  }
+}
 </script>
