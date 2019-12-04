@@ -64,8 +64,6 @@
 </template>
 
 <script>
-import articlesQuery from '~/apollo/queries/article/articles'
-
 export default {
   props: {
     articles: {
@@ -82,15 +80,6 @@ export default {
     },
     rightArticles() {
       return this.articles.slice(this.leftArticlesCount, this.articles.length)
-    }
-  },
-  apollo: {
-    articles: {
-      prefetch: true,
-      query: articlesQuery,
-      variables() {
-        return { id: parseInt(this.$route.params.id) }
-      }
     }
   }
 }
