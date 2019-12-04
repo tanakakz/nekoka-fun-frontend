@@ -40,11 +40,11 @@
         >
           <div
             class="uk-background-cover"
-            style="background-image: url('https://nekoka.fun/dummyimage');"
+            style="background-image: url('http://localhost:3000/background.png');"
             uk-height-viewport
           ></div>
           <div class="uk-padding-large">
-            <h1 style="font-family: Staatliches;">Nekoka Fun blog</h1>
+            <h1 style="font-family: Staatliches;">Nekoka Fun Blog</h1>
             <div class="uk-width-1-2@s">
               <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
                 <li v-for="category in categories" v-bind:key="category.id">
