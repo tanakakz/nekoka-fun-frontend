@@ -11,16 +11,16 @@
 
 <script>
 import articlesQuery from '~/apollo/queries/article/articles'
-import Articles from '~/apollo/component/Articles'
+import Articles from '~/components/Articles'
 
 export default {
+  components: {
+    Articles
+  },
   data() {
     return {
       articles: []
     }
-  },
-  components: {
-    Articles
   },
   apollo: {
     articles: {
