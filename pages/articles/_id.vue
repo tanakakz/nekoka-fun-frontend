@@ -11,7 +11,11 @@
     </div>
     <div class="uk-section">
       <div class="uk-container uk-container-small">
-        <div id="editor" v-if="article.content">{{ article.content }}</div>
+        <div
+          id="editor"
+          v-if="article.content"
+          v-html="$md.render(article.content)"
+        ></div>
         <p v-if="article.published_at">
           {{ moment(article.published_at).format('MMM Do YY') }}
         </p>
