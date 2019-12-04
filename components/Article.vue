@@ -4,6 +4,7 @@
       <div>
         <router-link
           v-for="article in leftArticles"
+          v-bind:key="article.id"
           :to="{ name: 'articles-id', params: { id: article.id } }"
           class="uk-link-reset"
         >
@@ -32,6 +33,7 @@
         <div class="uk-child-whidth-1-2@m uk-grid-match" uk-grid>
           <router-link
             v-for="article in rightArticles"
+            v-bind:key="article.id"
             :to="{ name: 'articles-id', params: { id: article.id } }"
             class="uk-link-reset"
           >
